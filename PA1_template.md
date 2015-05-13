@@ -9,18 +9,7 @@
 step_data <- read.csv(file="activity.csv", colClasses = c("numeric","character","numeric"), header = TRUE,na.strings="NA")
 
 library(lubridate)  ## to reformat date field
-```
-
-```
-## Warning: package 'lubridate' was built under R version 3.1.3
-```
-
-```r
 library(dplyr)  ## to perform processing in downstream steps
-```
-
-```
-## Warning: package 'dplyr' was built under R version 3.1.3
 ```
 
 ```
@@ -68,7 +57,7 @@ med_spd <- median(daily_steps$steps_per_day)
 hist(daily_steps$steps_per_day,col="red",main="Steps per Day",xlab="Steps per Day")
 ```
 
-![](./PA1_template_files/figure-html/unnamed-chunk-2-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-2-1.png) 
   
 #### mean steps per day: 10766.2
 #### median steps per day: 10765
@@ -92,7 +81,7 @@ interval_max <- descending_order[1,1]
 plot(avg_steps_per_interval$interval,avg_steps_per_interval$steps_per_interval,type="l")
 ```
 
-![](./PA1_template_files/figure-html/unnamed-chunk-3-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-3-1.png) 
 
 #### interval with maximum average steps: 835
  
@@ -127,7 +116,7 @@ median_tds <- median(together_daily_steps$steps_per_day)
 hist(together_daily_steps$steps_per_day,col="red",main="Steps per Day",xlab="Steps per Day")
 ```
 
-![](./PA1_template_files/figure-html/unnamed-chunk-4-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-4-1.png) 
   
 #### number of records with NA: 2304
 #### mean steps per day (including imputed values): 10766.2
@@ -175,6 +164,6 @@ plot(avg_steps_per_weekends_interval$interval,avg_steps_per_weekends_interval$st
      main="Weekends",xlab="Interval",ylab="Number of Steps",type="l")
 ```
 
-![](./PA1_template_files/figure-html/unnamed-chunk-5-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-5-1.png) 
 
 
