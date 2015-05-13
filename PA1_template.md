@@ -41,7 +41,7 @@ options(scipen=999, digits=1)
 
 
 ```r
-##convert to data frame
+##convert to a data frame
 df_step_data <- as.data.frame(step_data)
 ## Make data frame without NA records
 df_step_data_no_NA <- filter(df_step_data,!is.na(steps))
